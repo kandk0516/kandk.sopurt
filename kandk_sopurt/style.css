@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1200px;
+  }
+  body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  header {
+    display: flex;
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 20px;
+    justify-content: space-between;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  ul li {
+    list-style: none;
+  }
+  ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3b82f6;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  ul li a:hover {
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  hr {
+    opacity: 80%;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 40px 20px;
+    margin: 50px auto;
+    width: 80%;
+    background-color: #1d4ed8;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    color: #f1f5f9;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  
+  }
+  .game-footer {
+    text-align: center;
+    background-color: #111;
+    padding: 20px;
+    font-size: 14px;
+    color: #999;
+  }
+  .about h1 {
+    background-color: #3b82f6;
+    color: #fefce8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+  }
+  .intro {
+    font-size: 20px;
+    line-height: 2;
+    text-align: left;
+    color: #e2e8f0;
+  }
+  .icon {
+    font-size: 28px;
+    margin-right: 10px;
+  }
+  .icon.web {
+    color: #38bdf8;
+  }
+  .icon.app {
+    color: #86efac;
+  }
+  .icon.game {
+    color: #facc15;
+  }
+  .contact {
+    background-color: #1e293b;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .contact h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #38bdf8;
+  }
+  .contact ul {
+    list-style: none;
+    padding: 0;
+  }
+  .contact li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .contact i {
+    margin-right: 10px;
+    color: #38bdf8;
+    font-size: 20px;
+  }
+  .loader {
+    position: relative;
+    width: 120px;
+    height: 90px;
+    margin: 0 auto;
+  }
+  .loader:before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+    animation: loading-bounce 0.5s ease-in-out infinite alternate;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 7px;
+    width: 45px;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #f1f5f9, -35px 50px 0 #f1f5f9, -70px 95px 0 #f1f5f9;
+    animation: loading-step 1s ease-in-out infinite;
+  }
+  @keyframes loading-bounce {
+    0% { transform: scale(1, 0.7); }
+    40% { transform: scale(0.8, 1.2); }
+    60% { transform: scale(1, 1); }
+    100% { bottom: 140px; }
+  }
+  @keyframes loading-step {
+    0% {
+      box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+                  0 10px 0 #f1f5f9,
+                  -35px 50px 0 #f1f5f9,
+                  -70px 90px 0 #f1f5f9;
+    }
+    100% {
+      box-shadow: 0 10px 0 #f1f5f9,
+                  -35px 50px 0 #f1f5f9,
+                  -70px 90px 0 #f1f5f9,
+                  -70px 90px 0 rgba(0, 0, 0, 0);
+    }
+  }
+  button {
+    font-size: 17px;
+    padding: 1em 2.7em;
+    font-weight: 500;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+  }
+  .gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 0.6em;
+    margin-top: -0.25em;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.3)
+    );
+  }
+  .label {
+    position: relative;
+    top: -1px;
+  }
+  .transition {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+    background-color: rgba(18, 83, 143, 0.6);
+    border-radius: 9999px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  button:hover .transition {
+    width: 14em;
+    height: 14em;
+  }
+  button:active {
+    transform: scale(0.97);
+  }
+  
